@@ -34,7 +34,7 @@ function verificar(){
                if(idade >= 0 && idade < 18){
                 img.setAttribute(`src`, `menina.png`)
                 //adulto
-            } else if(idade >= 18){
+            } else if(idade > 18 && idade < 60){
                 img.setAttribute(`src`, `mulher.png`)
                 //idoso
             } else if(idade < 100){
@@ -43,6 +43,7 @@ function verificar(){
             } else{
                 img.setAttribute(`src` , `morto.png`)
             }
+            
         }
         resultado.innerHTML = `Detectamos ${genero} com 
         ${idade} anos`
